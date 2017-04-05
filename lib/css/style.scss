@@ -1,0 +1,502 @@
+@charset 'UTF-8';
+
+@import "reset";
+@import "variables";
+@import "mixins";
+
+.login {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	.login_box {
+		width: 450px;
+		padding: 40px 0px;
+		background: #fff;
+		@include radius(10px);
+		@include shadow(0 0 40px, #333);
+		.login_aviso {
+			width: calc(90% - 40px);
+			margin: 0 auto;
+			border: 2px solid #e74c3c;
+			background: #c0392b;
+			color: #fff;
+			display: block;
+			padding: 20px;
+			@include radius(4px);
+			p {
+				display: inline-block;
+			}
+			#close {
+				float: right;
+			}
+		}
+		.logo {
+			padding: 20px 0px;
+			width: 100%;
+			margin: 0 auto;
+			text-align: center;
+			img {
+				width: 100%;
+				max-width: 200px;
+			}
+		}
+		.box {
+			padding: 20px 0px;
+			width: 100%;
+			form {
+				input {
+					display: block;
+					width: calc(90% - 20px);
+					padding: 10px;
+					margin: 0 auto;
+					font-size: 18px;
+					margin-top: 20px;
+					@include radius(4px);
+					border: 2px solid #eee;
+					outline: none;
+					@include transition(1s);
+					&:focus {
+						@include shadow(0 0 20px, #999);
+						border-color: transparent;
+					}
+				}
+				button {
+					display: block;
+					width: calc(90% + 2px);
+					color: #fff;
+					padding: 20px;
+					margin: 0 auto;
+					font-size: 20px;
+					margin-top: 30px;
+					outline: none;
+					@include radius(4px);
+					@include gradient(100deg, $dcolor1, $dcolor2);
+					@include transition(1s);
+					&:hover {
+						@include scale(1.02);
+					}
+				}
+			}
+		}
+	}
+}
+.nav_top {
+	width: 100%;
+	display: table;
+	background: #fff;
+	.logo {
+		width: 50px;
+		padding: 10px;
+		float: left;
+		background: $ncolor1;
+		img {
+			width: 100%;
+			max-width: 50px;
+			height: 50px;
+		}
+	}
+	.width {
+		width: calc(90% - 63px);
+		margin: 0 auto;
+		display: table;
+		.pager {
+			float: left;
+			margin-top: 18px;
+			cursor: default;
+			.page_box {
+				display: inline-block;
+				background: #eee;
+				padding: 10px 12px;
+				@include radius(10px);
+				@include shadow(0 0 10px, #666);
+				margin: 0px 6px 0px 6px;
+				color: $ncolor2;
+				cursor: pointer;
+				@include transition(1s);
+				&:hover {
+					@include scale(1.03);
+					@include shadow(0 0 20px, #666);
+				}
+				i {
+					display: inline-block;
+					padding-right: 5px;
+				}
+				p {
+					display: inline-block;
+					text-transform: capitalize;
+				}
+			}
+		}
+		.user {
+			float: right;
+			margin-top: 12px;
+			.user_box {
+				ul {
+					width: 50px;
+					display: inline-block;
+					position: relative;
+					img {
+						width: 100%;
+						@include radius(50%);
+						max-width: 50px;
+						@include shadow(0 0 6px, #333);
+						cursor: pointer;
+					}
+					.submenu {
+						position: absolute;
+						background: #fff;
+						width: 150px;
+						z-index: 4;
+						right: 0;
+						@include radius(4px);
+						@include shadow(0 0 20px, #666);
+						display: none;
+						overflow: hidden;
+						margin-top: 10px;
+						li {
+							display: block;
+							a {
+								display: block;
+								padding: 15px;
+								color: #333;
+								@include transition(1s);
+								&:hover {
+									background: #eee;
+								}
+								i {
+									padding-right: 10px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.nav_left {
+	width: 70px;
+	background: $ncolor2;
+	float: left;
+	position: relative;
+	ul {
+		li {
+			display: block;
+			text-align: center;
+			.active {
+				color: #fff;
+				text-shadow: 0 0 20px #fff;
+			}
+			a {
+				display: block;
+				padding: 20px 10px;
+				color: #b4b3b3;
+				font-size: 24px;
+				@include transition(1s);
+				&:hover {
+					background: lighten($ncolor2, 5%);
+				}
+			}
+		}
+	}
+}
+.nav_mobile {
+	display: none;
+}
+.content {
+	float: right;
+	width: calc(100% - 70px);
+	.width {
+		width: 90%;
+		margin: 0 auto;
+		display: block;
+		padding: 40px 0px;
+		position: relative;
+		.content_title {
+			width: 100%;
+			padding: 20px 0px;
+			display: table;
+			h1 {
+				font-weight: lighter;
+				color: #999;
+				font-size: 30px;
+				width: 50%;
+				padding-bottom: 20px;
+				text-transform: capitalize;
+			}
+			.btnNew {
+				float: right;
+				margin-top: -70px;
+				padding: 15px 20px;
+				@include radius(4px);
+				@include transition(1s);
+				border: 2px solid $ncolor1;
+				color: $ncolor1;
+				&:hover {
+					background: $ncolor1;
+					color: #fff;
+				}
+				i {
+					padding-right: 10px;
+				}
+			}
+		}
+	}
+	.box_home {
+		width: 100%;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		.box {
+			position: relative;
+			overflow: hidden;
+			height: 500px;
+			width: 50%;
+			display: inline-block;
+			&:before {
+				content: '';
+				width: 100%;
+				height: 100%;
+				background: rgba(0,0,0,0.6);
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 2;
+			}
+			.icon {
+				position: absolute;
+				width: 100px;
+				height: 100px;
+				margin-top: 20px;
+				z-index: 3;
+				width: 100%;
+				.icon_box {
+					background: rgba(0,0,0,0.6);
+					width: 100px;
+					height: 100px;
+					margin: 0 auto;
+					text-align: center;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					z-index: 3;
+					@include radius(50%);
+					i {
+						color: #fff;
+						font-size: 32px;
+						text-shadow: 0 0 10px #fff;
+					}
+				}
+			}
+			.info {
+				position: absolute;
+				top: 50%;
+				z-index: 3;
+				width: 100%;
+				text-align: center;
+				p {
+					color: #fff;
+					font-size: 30px;
+					padding-bottom: 40px;
+					cursor: default;
+					display: block;
+					text-shadow: 0 0 20px #fff;
+				}
+				a {
+					padding: 20px 40px;
+					display: inline-block;
+					margin: 0 auto;
+					background: #333;
+					color: #fff;
+					@include radius(10px);
+					@include gradient(80deg, $dcolor3, $dcolor4);
+					@include transition(1s);
+					&:hover {
+						@include scale(1.05);
+					}
+				}
+			}
+		}
+	}
+	.aviso {
+		@extend .galeria;
+		@extend .table;
+		width: 100%;
+		text-align: center;
+		font-size: 30px;
+		padding: 20px 0px;
+		color: #999;
+	}
+	.table {
+		width: 100%;
+		margin: 0 auto;
+		table {
+			width: 100%;
+			text-align: center;
+			
+			@include radius(10px);
+			th {
+				padding: 20px 0px;
+				border-bottom: 2px solid #ddd;
+			}
+			td {
+				padding: 20px 0px;
+				vertical-align: middle;
+				img {
+					width: 60px;
+					height: 60px;
+					@include radius(50%);
+					@include shadow(0 0 6px, #666);
+				}
+				&:last-child {
+					width: 200px;
+				}
+			}
+			.btn {
+				border: 2px solid #ddd;
+				padding: 10px 20px;
+				background: #333;
+				color: #fff;
+				display: inline-block;
+				text-align: center;
+				margin: 10px 5px 0px 5px;
+				@include transition(1s);
+				@include radius(4px);
+			}
+			.blue {
+				@extend .btn;
+				border-color: #2980b9;
+				background: #2980b9;
+				&:hover {
+					border-color: lighten(#2980b9, 5%);
+					background: lighten(#2980b9, 5%);
+				}
+			}
+			.red {
+				@extend .btn;
+				border-color: #c0392b;
+				background: #c0392b;
+				&:hover {
+					border-color: lighten(#c0392b, 10%);
+					background: lighten(#c0392b, 10%);
+				}
+			}
+		}
+	}
+	.galeria {
+		text-align: center;
+		.box {
+			width: 31.555%;
+			display: inline-block;
+			margin: 5px;
+			.img {
+				height: 300px;
+				@include radius(4px 4px 0 0);
+			}
+			.action {
+				margin-top: -4px;
+				.btn {
+					padding: 20px;
+					background: #333;
+					color: #fff;
+					display: inline-block;
+					text-align: center;
+					width: calc(50% - 40px);
+					float: left;
+					@include transition(1s);
+					&:first-child {
+						@include radius(0 0 0 4px);
+					}
+					&:last-child {
+						@include radius(0 0 4px 0);
+					}
+				}
+				.blue {
+					@extend .btn;
+					border-color: #2980b9;
+					background: #2980b9;
+					&:hover {
+						border-color: lighten(#2980b9, 5%);
+						background: lighten(#2980b9, 5%);
+					}
+				}
+				.red {
+					@extend .btn;
+					border-color: #c0392b;
+					background: #c0392b;
+					&:hover {
+						border-color: lighten(#c0392b, 10%);
+						background: lighten(#c0392b, 10%);
+					}
+				}
+			}
+		}
+	}
+	.form {
+		padding: 20px 0px;
+		form {
+			width: 100%;
+			margin: 0 auto;
+			input,select {
+				padding: 15px;
+				width: calc(80% - 20px);
+				margin-top: 20px;
+				display: block;
+				background: transparent;
+				border: 2px solid #ddd;
+				color: #333;
+				font-size: 18px;
+				outline: none;
+				@include radius(4px);
+				@include transition(1s);
+				&:focus {
+					@include scale(1.01);
+					@include shadow(0 0 10px, #666);
+				}
+			}
+			select {
+				width: calc(80% + 15px);
+				&:focus {
+					@include scale(1);
+					@include shadow(0 0 0, #666);
+				}
+				&:hover {
+					@include shadow(0 0 10px, #666);
+				}
+			}
+			button {
+				padding: 15px;
+				width: calc(80% + 15px);
+				margin-top: 40px;
+				display: block;
+				font-size: 18px;
+				@include radius(4px);
+				@include transition(1s);
+				outline: none;
+				color: #fff;
+				@include gradient(100deg, $dcolor1, $dcolor2);
+				&:hover {
+					@include scale(1.03);
+				}
+			}
+		}
+	}
+	.readMore {
+		padding: 20px 0px;
+		p {
+			font-size: 18px;
+			margin-top: 10px;
+			span {
+				display: block;
+				margin-top: 10px;
+				background: #ddd;
+				padding: 20px;
+				@include radius(4px);
+				line-height: 1.5;
+			}
+		}
+	}
+}
+@import "media";

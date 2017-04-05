@@ -1,0 +1,83 @@
+@media (max-width: 900px) {
+	.content {
+		.galeria {
+			.box {
+				width: 45%;
+			}
+		}
+		.box_home {
+			display: block;
+			.box {
+				width: 100%;
+				display: block;
+			}
+		}
+	}
+}
+@media (max-width: 500px) {
+	.content {
+		.galeria {
+			.box {
+				width: 90%;
+			}
+		}
+		.table {
+			table {
+				th {
+					display: none;
+				}
+				td {
+					display: block;
+					width: 100%!important;
+					@include gradient(100deg, $dcolor1, $dcolor3);
+					color: #fff;
+					&:first-child {
+						@include radius(4px 4px 0 0);
+					}
+					&:last-child {
+						@include radius(0 0 4px 4px);
+						margin: 0 0 10px 0;
+					}
+				}
+			}
+		}
+	}
+	.login {
+		.login_box {
+			width: 90%;
+		}
+	}
+}
+@media (max-width: 430px) {
+	.nav_top {
+		.width {
+			.pager {
+				display: none;
+			}
+		}
+	}
+	.active {
+		margin-left: 0px!important;
+	}
+	.nav_left {
+		margin-left: -70px;
+		@include transition(0.5s);
+	}
+	.content {
+		width: 100%;
+		@include transition(0.5s);
+	}
+	.active_content {
+		width: calc(100% - 70px);
+	}
+	.nav_mobile {
+		display: block;
+		width: 70px;
+		background: $dcolor2;
+		padding: 15px 0px;
+		text-align: center;
+		color: #fff;
+		float: left;
+		font-size: 30px;
+	}
+}
