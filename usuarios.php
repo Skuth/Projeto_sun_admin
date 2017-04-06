@@ -37,8 +37,8 @@ $logado = json_decode($_SESSION["logado"], true);
 						?>
 						<tr>
 							<td><img src="lib/img/<?=$value['foto']?>"></td>
-							<td><?=$value['nome']?></td>
-							<td><?=$value['email']?></td>
+							<td><?=ucfirst($value['nome'])?></td>
+							<td><?=ucfirst($value['email'])?></td>
 							<td>********</td>
 							<td>
 								<?php if ($value['nivel'] == 1) {
