@@ -12,7 +12,7 @@ $pag->verificaOff();
 		</div>
 		<div class="box">
 			<form method="POST" enctype="multipart/form">
-				<input type="email" name="email" placeholder="Email" required>
+				<input type="email" name="email" placeholder="Email" required autofocus>
 				<input type="password" name="senha" placeholder="Senha" required>
 				<button type="submit" name="entrar">Entrar</button>
 			</form>

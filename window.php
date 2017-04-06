@@ -27,7 +27,7 @@ $pag->verificaOn();
 				</div>
 				<div class="form">
 					<form method="POST" enctype="multipart/form-data">
-						<input type="text" name="nome" placeholder="Nome" required>
+						<input type="text" name="nome" placeholder="Nome" required autofocus>
 						<input type="email" name="email" placeholder="Email" required>
 						<input type="password" name="senha" placeholder="Senha" required>
 						<?php if ($nivel == 2): ?>
