@@ -27,8 +27,9 @@ case 'usuario':
 if ($nivel == 2) {
 $user = new Usuario();
 $query = $user->listById($id);
-if ($query[0]['foto'] !== 'user_unknown.png') {
-unlink('lib'.DIRECTORY_SEPARATOR.'img'.DIRECTORY_SEPARATOR.''.$query[0]['foto']);
+if ($query[0]['foto'] === 'user_unknown.png') {
+}else {
+unlink('lib'.DIRECTORY_SEPARATOR.'upload'.DIRECTORY_SEPARATOR.'perfil'.DIRECTORY_SEPARATOR.''.$query[0]['foto']);
 }
 $user->delete($id);
 header('location:usuarios.php');
@@ -40,7 +41,7 @@ break;
 case 'foto':
 $user = new Galeria();
 $query = $user->listById($id);
-unlink('lib'.DIRECTORY_SEPARATOR.'upload'.DIRECTORY_SEPARATOR.''.$query[0]['foto']);
+unlink('lib'.DIRECTORY_SEPARATOR.'upload'.DIRECTORY_SEPARATOR.'galeria'.DIRECTORY_SEPARATOR.''.$query[0]['foto']);
 $user->delete($id);
 header('location:galeria.php');
 break;

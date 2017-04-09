@@ -20,11 +20,11 @@ echo '<a href="'.$pager[0].'.php"><div class="page_box">
 <div class="user">
 <div class="user_box">
 <ul>
-<img src="lib/img/user_unknown.png">
-<ul class="submenu">
 <?php
 $logado = json_decode($_SESSION["logado"], true);
 ?>
+<img src="lib/upload/perfil/<?=$logado["foto"]?>">
+<ul class="submenu">
 <li><a href="javascript:abrirJanela('window.php?c=eusuario&id=<?=$logado["id"]?>')"><i class="fa fa-user"></i>Profile</a></li>
 <li><a href="sair.php" onclick="return confirm('Concluir acão ?')"><i class="fa fa-sign-out"></i>Sair</a></li>
 </ul>

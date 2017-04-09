@@ -22,7 +22,7 @@ if (count($query) > 0) {
 foreach ($query as $key => $value) {
 ?>
 <div class="box">
-<div class="img" style="background: url('lib/upload/<?=$value['foto']?>') center center; background-size: cover;">
+<div class="img" style="background: url('lib/upload/galeria/<?=$value['foto']?>') center center; background-size: cover;">
 </div>
 <div class="action">
 <a href="javascript:abrirJanela('window.php?c=efoto&id=<?=$value['id']?>')" class="btn blue"><i class="fa fa-pencil"></i></a>

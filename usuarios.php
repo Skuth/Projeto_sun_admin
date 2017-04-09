@@ -36,7 +36,7 @@ if (count($query) > 0) {
 foreach ($query as $key => $value) {
 ?>
 <tr>
-<td><img src="lib/img/<?=$value['foto']?>"></td>
+<td><img src="lib/upload/perfil/<?=$value['foto']?>"></td>
 <td><?=ucfirst($value['nome'])?></td>
 <td><?=ucfirst($value['email'])?></td>
 <td>********</td>

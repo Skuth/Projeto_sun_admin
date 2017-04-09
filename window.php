@@ -62,7 +62,7 @@ if (!empty($_FILES['foto']['name'])) {
 $file = $_FILES['foto'];
 $fileExtension = explode(".", strtolower($file['name']));
 $novoNome = date("dmYHis").".".$fileExtension[1];
-$dirUploads = "lib".DIRECTORY_SEPARATOR."img";
+$dirUploads = "lib".DIRECTORY_SEPARATOR."upload".DIRECTORY_SEPARATOR."perfil";
 if (move_uploaded_file($file["tmp_name"], $dirUploads . DIRECTORY_SEPARATOR . $novoNome)) {
 echo "Upload realizado com sucesso!<br>";
 }else {
@@ -139,11 +139,11 @@ $nivel = 1;
 }
 if (!empty($_FILES['foto']['name'])) {
 $fotoOld = $_POST['fotoAntiga'];
-unlink('lib'.DIRECTORY_SEPARATOR.'img'.DIRECTORY_SEPARATOR.''.$fotoOld);
+unlink("lib".DIRECTORY_SEPARATOR."upload".DIRECTORY_SEPARATOR."perfil".DIRECTORY_SEPARATOR.$fotoOld);
 $file = $_FILES['foto'];
 $fileExtension = explode(".", strtolower($file['name']));
 $novoNome = date("dmYHis").".".$fileExtension[1];
-$dirUploads = "lib".DIRECTORY_SEPARATOR."img";
+$dirUploads = "lib".DIRECTORY_SEPARATOR."upload".DIRECTORY_SEPARATOR."perfil";
 move_uploaded_file($file["tmp_name"], $dirUploads . DIRECTORY_SEPARATOR . $novoNome);
 $foto = $novoNome;
 }else {
@@ -184,7 +184,7 @@ echo "Error : ".$file["error"];
 $fileExtension = explode(".", strtolower($file['name']));
 $novoNome = date("dmYHis").".".$fileExtension[1];
 
-$dirUploads = "lib".DIRECTORY_SEPARATOR."upload";
+$dirUploads = "lib".DIRECTORY_SEPARATOR."upload".DIRECTORY_SEPARATOR."galeria";
 if (!is_dir($dirUploads)) {
 mkdir($dirUploads);
 }//verificar pasta e criar pasta
@@ -238,11 +238,11 @@ try {
 if (isset($_POST['editar'])) {
 if (!empty($_FILES['foto']['name'])) {
 $fotoOld = $_POST['fotoAntiga'];
-unlink('lib'.DIRECTORY_SEPARATOR.'upload'.DIRECTORY_SEPARATOR.''.$fotoOld);
+unlink("lib".DIRECTORY_SEPARATOR."upload".DIRECTORY_SEPARATOR."galeria".DIRECTORY_SEPARATOR.$fotoOld);
 $file = $_FILES['foto'];
 $fileExtension = explode(".", strtolower($file['name']));
 $novoNome = date("dmYHis").".".$fileExtension[1];
-$dirUploads = "lib".DIRECTORY_SEPARATOR."upload";
+$dirUploads = "lib".DIRECTORY_SEPARATOR."upload".DIRECTORY_SEPARATOR."galeria";
 move_uploaded_file($file["tmp_name"], $dirUploads . DIRECTORY_SEPARATOR . $novoNome);
 $foto = $novoNome;
 }else {
