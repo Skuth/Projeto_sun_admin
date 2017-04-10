@@ -7,7 +7,6 @@
 $pag = new Usuario();
 $pag->verificaOn();
 $logado = json_decode($_SESSION["logado"], true);
-var_dump($logado);
 ?>
 
 <div class="content">
