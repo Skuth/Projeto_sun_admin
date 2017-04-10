@@ -4,6 +4,8 @@ body { background: #eee; }
 
 body, html { height: 100%; }
 
+a { cursor: pointer; }
+
 #preloader { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: #fff; z-index: 140; }
 #preloader #status { width: 200px; height: 200px; position: absolute; left: 50%; top: 50%; background-image: url("../img/preloader.gif"); background-repeat: no-repeat; background-position: center; margin: -100px 0 0 -100px; }
 
@@ -50,7 +52,7 @@ body, html { height: 100%; }
 .content .width { width: 90%; margin: 0 auto; display: block; padding: 40px 0px; position: relative; }
 .content .width .content_title { width: 100%; padding: 20px 0px; display: table; }
 .content .width .content_title h1 { font-weight: lighter; color: #999; font-size: 30px; width: 50%; padding-bottom: 20px; text-transform: capitalize; }
-.content .width .content_title .btnNew { float: right; margin-top: -70px; padding: 15px 20px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px; -webkit-transition: all 1s; -moz-transition: all 1s; -ms-transition: all 1s; transition: all 1s; border: 2px solid #2980b9; color: #2980b9; }
+.content .width .content_title .btnNew { float: right; margin-top: -70px; padding: 15px 20px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px; -webkit-transition: all 1s; -moz-transition: all 1s; -ms-transition: all 1s; transition: all 1s; border: 2px solid #2980b9; background: transparent; color: #2980b9; }
 .content .width .content_title .btnNew:hover { background: #2980b9; color: #fff; }
 .content .width .content_title .btnNew i { padding-right: 10px; }
 .content .box_home { width: 100%; margin: 0 auto; display: flex; justify-content: space-between; }
@@ -88,12 +90,12 @@ body, html { height: 100%; }
 .content .galeria .box .action .red:hover, .content .aviso .box .action .red:hover { border-color: #d65548; background: #d65548; }
 .content .form { padding: 20px 0px; }
 .content .form form { width: 100%; margin: 0 auto; }
-.content .form form input, .content .form form select { padding: 15px; width: calc(80% - 20px); margin-top: 20px; display: block; background: transparent; border: 2px solid #ddd; color: #333; font-size: 18px; outline: none; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px; -webkit-transition: all 1s; -moz-transition: all 1s; -ms-transition: all 1s; transition: all 1s; }
+.content .form form input, .content .form form select { padding: 15px; width: calc(100% - 20px); margin-top: 20px; display: block; background: transparent; border: 2px solid #ddd; color: #333; font-size: 18px; outline: none; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px; -webkit-transition: all 1s; -moz-transition: all 1s; -ms-transition: all 1s; transition: all 1s; }
 .content .form form input:focus, .content .form form select:focus { -webkit-transform: scale(1.01); -moz-transform: scale(1.01); -ms-transform: scale(1.01); transform: scale(1.01); -webkit-box-shadow: 0 0 10px #666; -moz-box-shadow: 0 0 10px #666; -ms-box-shadow: 0 0 10px #666; box-shadow: 0 0 10px #666; }
-.content .form form select { width: calc(80% + 15px); }
+.content .form form select { width: calc(100% + 15px); }
 .content .form form select:focus { -webkit-transform: scale(1); -moz-transform: scale(1); -ms-transform: scale(1); transform: scale(1); -webkit-box-shadow: 0 0 0 #666; -moz-box-shadow: 0 0 0 #666; -ms-box-shadow: 0 0 0 #666; box-shadow: 0 0 0 #666; }
 .content .form form select:hover { -webkit-box-shadow: 0 0 10px #666; -moz-box-shadow: 0 0 10px #666; -ms-box-shadow: 0 0 10px #666; box-shadow: 0 0 10px #666; }
-.content .form form button { padding: 15px; width: calc(80% + 15px); margin-top: 40px; display: block; font-size: 18px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px; -webkit-transition: all 1s; -moz-transition: all 1s; -ms-transition: all 1s; transition: all 1s; outline: none; color: #fff; -webkit-background-image: linear-gradient(100deg, #4a3b6e, #c52457); -moz-background-image: linear-gradient(100deg, #4a3b6e, #c52457); -ms-background-image: linear-gradient(100deg, #4a3b6e, #c52457); background-image: linear-gradient(100deg, #4a3b6e, #c52457); }
+.content .form form button { padding: 15px; width: calc(100% + 15px); margin-top: 40px; display: block; font-size: 18px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px; -webkit-transition: all 1s; -moz-transition: all 1s; -ms-transition: all 1s; transition: all 1s; outline: none; color: #fff; -webkit-background-image: linear-gradient(100deg, #4a3b6e, #c52457); -moz-background-image: linear-gradient(100deg, #4a3b6e, #c52457); -ms-background-image: linear-gradient(100deg, #4a3b6e, #c52457); background-image: linear-gradient(100deg, #4a3b6e, #c52457); }
 .content .form form button:hover { -webkit-transform: scale(1.03); -moz-transform: scale(1.03); -ms-transform: scale(1.03); transform: scale(1.03); }
 .content .readMore { padding: 20px 0px; }
 .content .readMore p { font-size: 18px; margin-top: 10px; }

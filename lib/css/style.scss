@@ -233,6 +233,7 @@
 				@include radius(4px);
 				@include transition(1s);
 				border: 2px solid $ncolor1;
+				background: transparent;
 				color: $ncolor1;
 				&:hover {
 					background: $ncolor1;
@@ -441,7 +442,7 @@
 			margin: 0 auto;
 			input,select {
 				padding: 15px;
-				width: calc(80% - 20px);
+				width: calc(100% - 20px);
 				margin-top: 20px;
 				display: block;
 				background: transparent;
@@ -457,7 +458,7 @@
 				}
 			}
 			select {
-				width: calc(80% + 15px);
+				width: calc(100% + 15px);
 				&:focus {
 					@include scale(1);
 					@include shadow(0 0 0, #666);
@@ -468,7 +469,7 @@
 			}
 			button {
 				padding: 15px;
-				width: calc(80% + 15px);
+				width: calc(100% + 15px);
 				margin-top: 40px;
 				display: block;
 				font-size: 18px;
